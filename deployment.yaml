@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: argocd-kube-deploy
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       run: argocd-kube
@@ -13,5 +13,5 @@ spec:
         run: argocd-kube
     spec:
       containers:
-      - image: 
+      - image: jeunsu1/seb-site:v2.0
         name: argocd-kube
